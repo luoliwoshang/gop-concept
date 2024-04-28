@@ -1,2 +1,4 @@
-rect := &Rect{10, 20}
+rect := &Rect{20, 20}
 println rect.area
+
+println rect.area+rect.area

@@ -1,0 +1,42 @@
+// func add = (
+// 	func(a, b int) int {
+// 		return a + b
+// 	}
+// 	func(a, b string) string {
+// 		return a + b
+// 	}
+// )
+
+// type foo struct {
+// }
+
+// func (a *foo) mulInt(b int) *foo {
+// 	println "mulInt"
+// 	return a
+// }
+
+// func (a *foo) mulFoo(b *foo) *foo {
+// 	println "mulFoo"
+// 	return a
+// }
+
+// func (foo).mul = (
+// 	(foo).mulInt
+// 	(foo).mulFoo
+// )
+
+// func mulInt(a, b int) int {
+// 	return a * b
+// }
+
+// func mulFloat(a, b float64) float64 {
+// 	return a * b
+// }
+
+// func mul = (
+// 	mulInt
+// 	func(a, b string) string {
+// 		return a + b
+// 	}
+// 	mulFloat
+// )

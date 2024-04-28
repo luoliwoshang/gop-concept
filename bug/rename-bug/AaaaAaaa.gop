@@ -1,0 +1,63 @@
+// func add = (
+// 	func(a, b int) int {
+// 		return a + b
+// 	}
+// 	func(a, b string) string {
+// 		return a + b
+// 	}
+// )
+
+// println add(100, 7)
+// println add("Hello", "World")
+
+// println mul(100, 7)
+// println mul(1.2, 3.14)
+// println mul("aaa", "bbb")
+
+// type foo struct {
+// }
+
+// func (a *foo) mulInt(b int) *foo {
+// 	println "mulInt"
+// 	return a
+// }
+
+// func (a *foo) mulFoo(b *foo) *foo {
+// 	println "mulFoo"
+// 	return a
+// }
+
+// func (foo).mul = (
+// 	(foo).mulInt
+// 	(foo).mulFoo
+// )
+
+// var a, b *foo
+// var c = a.mul(100)
+// var d = a.mul(c)
+
+// var a *foo
+
+// a.Broadcast("hhh")
+
+type Foo struct {
+}
+
+func (a *Foo) DivisionInt(b int) *Foo {
+	println "DivisionInt"
+	return a
+}
+
+func (a *Foo) DivisionFoo(b *Foo) *Foo {
+	println "DivisionFoo"
+	return a
+}
+
+func (Foo).Division = (
+	(Foo).DivisionInt
+	(Foo).DivisionFoo
+)
+
+var b *Foo
+
+b.Division(1)

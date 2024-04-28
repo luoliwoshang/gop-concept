@@ -1,4 +1,4 @@
-mock "foo.com", new(AppV2)  // name of any YAP v2 web server is `AppV2`
+mock "foo.com", new(AppV2) // name of any YAP v2 web server is `AppV2`
 
 id := "123"
 get "http://foo.com/p/${id}"
