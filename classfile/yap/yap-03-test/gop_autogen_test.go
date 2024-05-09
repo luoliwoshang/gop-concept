@@ -3,13 +3,23 @@
 package main
 
 import (
+	"fmt"
 	"github.com/goplus/yap/ytest"
 	"github.com/qiniu/x/stringutil"
 	"testing"
 )
 
 type case_foo struct {
-	ytest.Case
+	ytest.CaseApp
+	*App
+}
+type App struct {
+	ytest.App
+}
+//line main_ytest.gox:1
+func (this *App) MainEntry() {
+//line main_ytest.gox:1:1
+	fmt.Println("hello")
 }
 //line foo_ytest.gox:1
 func (this *case_foo) Main() {
@@ -28,5 +38,8 @@ func (this *case_foo) Classfname() string {
 	return "foo"
 }
 func Test_foo(t *testing.T) {
-	ytest.Gopt_Case_TestMain(new(case_foo), t)
+	ytest.Gopt_CaseApp_TestMain(new(case_foo), t)
+}
+func TestMain(m *testing.M) {
+	ytest.Gopt_App_TestMain(new(App), m)
 }

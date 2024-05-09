@@ -1,7 +1,0 @@
-import (
-	"test.com/def"
-)
-
-n := &def.N{}
-
-// n.onKey()
