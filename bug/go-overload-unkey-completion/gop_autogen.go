@@ -2,7 +2,11 @@
 
 package main
 
-const _ = true
+import "fmt"
 
+const _ = true
+//line use.gop:1
 func main() {
+//line use.gop:1:1
+	fmt.Println("hello")
 }
