@@ -1,0 +1,17 @@
+type Foo struct {
+}
+
+func (a *Foo) DivisionInt(b int) *Foo {
+	println "DivisionInt"
+	return a
+}
+
+func (a *Foo) DivisionFoo(b *Foo) *Foo {
+	println "DivisionFoo"
+	return a
+}
+
+func (Foo).Division = (
+	(Foo).DivisionInt
+	(Foo).DivisionFoo
+)

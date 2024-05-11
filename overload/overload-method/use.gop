@@ -1,0 +1,3 @@
+f := &Foo{}
+f.Division(1)
+f.Division(f)
