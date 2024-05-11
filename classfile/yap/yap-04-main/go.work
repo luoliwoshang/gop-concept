@@ -1,5 +1,0 @@
-go 1.21.4
-
-use .
-
-replace github.com/goplus/gop v1.2.5 => /opt/homebrew/Cellar/goplus/1.2.5/libexec
