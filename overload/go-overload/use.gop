@@ -1,0 +1,7 @@
+n := &N{}
+n.onKey("hello", func() {
+	println("hello world")
+})
+n.onKey("hello", func(key string) {
+	println(key)
+})
