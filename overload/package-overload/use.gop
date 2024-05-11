@@ -1,0 +1,4 @@
+import "hello/def"
+
+println def.mul(2, 2)
+println def.mul("a", "b")
