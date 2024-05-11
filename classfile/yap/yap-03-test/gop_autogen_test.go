@@ -3,7 +3,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/goplus/yap/ytest"
 	"github.com/qiniu/x/stringutil"
 	"testing"
@@ -11,26 +10,18 @@ import (
 
 type case_foo struct {
 	ytest.CaseApp
-	*App
-}
-type App struct {
-	ytest.App
-}
-//line main_ytest.gox:1
-func (this *App) MainEntry() {
-//line main_ytest.gox:1:1
-	fmt.Println("hello")
 }
 //line foo_ytest.gox:1
+// mock "foo.com", new(AppV2) // name of any YAP v2 web server is `AppV2`
 func (this *case_foo) Main() {
-//line foo_ytest.gox:1:1
-	this.Mock("foo.com", new(AppV2))
+//line foo_ytest.gox:2:1
+	this.CaseApp.RunMock("foo.com", new(AppV2))
 //line foo_ytest.gox:3:1
 	id := "123"
 //line foo_ytest.gox:4:1
 	this.Get(stringutil.Concat("http://foo.com/p/", id))
 //line foo_ytest.gox:5:1
-	this.RetWith(200)
+	this.CaseApp.RetWith(200)
 //line foo_ytest.gox:6:1
 	this.Json(map[string]string{"id": id})
 }
@@ -39,7 +30,4 @@ func (this *case_foo) Classfname() string {
 }
 func Test_foo(t *testing.T) {
 	ytest.Gopt_CaseApp_TestMain(new(case_foo), t)
-}
-func TestMain(m *testing.M) {
-	ytest.Gopt_App_TestMain(new(App), m)
 }
