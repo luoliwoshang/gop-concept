@@ -8,10 +8,10 @@ import (
 )
 
 const _ = true
-//line use.gop:3
+//line use.gop:7
 func main() {
-//line use.gop:3:1
+//line use.gop:7:1
 	fmt.Println(def.MulInt(2, 2))
-//line use.gop:4:1
+//line use.gop:8:1
 	fmt.Println(def.Mul__1("a", "b"))
 }

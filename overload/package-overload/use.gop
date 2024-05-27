@@ -1,4 +1,10 @@
 import "hello/def"
 
+// type B struct {
+// 	a int
+// }
+
 println def.mul(2, 2)
 println def.mul("a", "b")
+
+// b := &B{}

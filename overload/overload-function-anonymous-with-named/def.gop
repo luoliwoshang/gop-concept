@@ -13,3 +13,5 @@ func mul = (
 	}
 	mulFloat
 )
+
+// const Gopo_mul
